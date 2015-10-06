@@ -1,27 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 5, 2015, 3:33:20 PM
+    Author     : nick
+*/
+
+
+html {
+    background-color: #437FFF;
+}
+
+h1{
+    text-align:center;
+}
+
+img.logo {
+	margin-left: auto;
+	margin-right: auto;
+	width:125px;
+	height:125px;
 	
-	nav {font-family:"Times New Roman", serif;
-		font-size:35px;
-		text-align:center}
-	nav:link {color: black}
-	nav:visited {color:black}
-	nav:hover {color:gray}
-	h1 {font-family: "Helvetica", "Arial", sans-serif;
-		font-size:30px}
-	p {font-family: "Helvetica", "Arial", sans-serif;
-		font-size:20px}
-	a:link {color: #43b7f8;
-			text-decoration-color: black}
-	a:visited {color: #43b7f8;
-			text-decoration-color: black}
-	a:hover {color: #75d7fb;
-			text-decoration: underline;
-			text-decoration-color: black}
-			
-	/*		
-	#grad {
-  			background: -webkit-linear-gradient(red, green, blue); /* For Safari 5.1 to 6.0 */
-  			background: -o-linear-gradient(red, green, blue); /* For Opera 11.1 to 12.0 */
- 			background: -moz-linear-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
- 			background: linear-gradient(red, green, blue); /* Standard syntax */
- 			}
-    */
+}
+
+nav {
+    text-align:center;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 2em;
+    background-color:white;
+    padding-top:1em;
+    padding-bottom:1em;
+    margin-bottom:2em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align:center;
+}
+
+nav > a:hover, /* mouse */
+nav > a:focus, /* tab */
+nav > a:active {
+    background-color: black;
+    color:black;
+    }
+
+
+nav > a {
+    text-decoration: none;
+    color:black;
+    font-family:sans-serif;
+}
+
+main {
+    margin-top:4em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:150px;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+    padding-right:1em;
+    width: 40em;
+    background-color: white;
+    line-height: 140%;
+    font-family:sans-serif;
+}
