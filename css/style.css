@@ -1,0 +1,27 @@
+	
+	nav {font-family:"Times New Roman", serif;
+		font-size:35px;
+		text-align:center}
+	nav:link {color: black}
+	nav:visited {color:black}
+	nav:hover {color:gray}
+	h1 {font-family: "Helvetica", "Arial", sans-serif;
+		font-size:30px}
+	p {font-family: "Helvetica", "Arial", sans-serif;
+		font-size:20px}
+	a:link {color: #43b7f8;
+			text-decoration-color: black}
+	a:visited {color: #43b7f8;
+			text-decoration-color: black}
+	a:hover {color: #75d7fb;
+			text-decoration: underline;
+			text-decoration-color: black}
+			
+	/*		
+	#grad {
+  			background: -webkit-linear-gradient(red, green, blue); /* For Safari 5.1 to 6.0 */
+  			background: -o-linear-gradient(red, green, blue); /* For Opera 11.1 to 12.0 */
+ 			background: -moz-linear-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+ 			background: linear-gradient(red, green, blue); /* Standard syntax */
+ 			}
+    */
