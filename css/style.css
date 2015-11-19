@@ -93,9 +93,6 @@ main {
     font-family: 'Archivo Narrow', sans-serif;
 }
 
-main > p {
-	margin-top:0;
-}
 	
 
 p > a {
