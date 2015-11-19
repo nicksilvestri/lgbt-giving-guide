@@ -8,6 +8,8 @@ and open the template in the editor.
     Author     : nick
 */
 
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700);
 
 html {
     background-color: #000;
@@ -15,6 +17,7 @@ html {
 
 h1{
     text-align:center;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 h2{
@@ -26,6 +29,12 @@ h2{
 	margin: 0 auto;
 	text-align:center;
 	margin-bottom:1em;
+}
+
+img {
+	width: auto;
+	max-height: 10px;
+	text-align: center;
 }
 
 nav {
@@ -58,9 +67,9 @@ nav > a:active {
 
 
 nav > a {
+	font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     color:black;
-    font-family:sans-serif;
 }
 
 main {
@@ -75,7 +84,7 @@ main {
     width: 40em;
     background-color: white;
     line-height: 140%;
-    font-family:sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 p > a {
