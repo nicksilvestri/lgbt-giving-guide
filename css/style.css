@@ -21,8 +21,14 @@ h1{
 }
 
 h2{
-	text-align: right;
+	font-family: 'Josefin Sans', sans-serif;
 	font-size:14px;
+}
+
+h3 {
+    font-family: 'Archivo Narrow', sans-serif;
+	font-style:italic;
+	font-size:12px;
 }
 
 .logo {
