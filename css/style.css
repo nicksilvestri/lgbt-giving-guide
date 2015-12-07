@@ -12,7 +12,7 @@ and open the template in the editor.
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700);
 
 html {
-    background-color: #000;
+    background-color: #211D0F;
 }
 
 h1{
@@ -67,7 +67,7 @@ header{
 nav > a:hover, /* mouse */
 nav > a:focus, /* tab */
 nav > a:active {
-    background-color: black;
+    background-color: #FFDC74;
     color:black;
     }
 
@@ -105,6 +105,6 @@ p > a {
 p > a:hover, /* mouse */
 p > a:focus, /* tab */
 p > a:active {
-    background-color: black;
+    background-color: #FFDC74;
     color:black;
     }
