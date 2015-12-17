@@ -42,9 +42,11 @@ h3 {
 }
 
 p > img {
-    max-width: 100%;
 
-    margin-right:.2em;;
+	max-width: 100%;
+	max-height: 600px;
+	text-align: center;
+
 }
 
 
@@ -56,12 +58,7 @@ p > img {
         justify-content: space-around;
         white-space: nowrap;
     }
-    p > img {
-    max-width: 100%;
-    max-height: 17em;
-    margin-right:.2em;
-    float:left;
-}
+    
 }
 
 @media (max-width:600px){
