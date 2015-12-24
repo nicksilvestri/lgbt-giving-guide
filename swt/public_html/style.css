@@ -1,0 +1,93 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 22, 2015, 9:49:47 PM
+    Author     : nick
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+
+#logo {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(255,255,255,.85);
+    padding: 1em;
+}
+
+h1{
+    text-align: center;
+    padding:.5em 0 0 0;
+    margin:0 0 0 0;
+}
+
+p{
+    margin: 0 0 0 0;
+    font-size: 150%;
+    text-align: center;
+}
+
+#hours td{
+    font-size: 150%;
+    padding:  0 1em 0 0;
+}
+
+#hours {
+    margin: 0 auto 0 auto;
+}
+
+main {
+    background: rgba(255,255,255,.85);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+
+}
+
+nav ul li a {
+    text-decoration:none;
+    font-size: 1.5em;
+    color: black;
+    padding: 2em;
+}
+
+
+
+body {
+    background-image: url("background.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    font-family: 'Cutive Mono', monospace;
+}
+
+@media (min-width:800px){
+    nav ul{
+        flex-direction: row;
+        position:relative;
+        top:2.5em;
+    }
+
+    body {
+        width: 800px;
+        margin: auto;
+    }
+    
+    main {
+        margin-top:6em;
+    }
+    
+}
