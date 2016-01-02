@@ -9,11 +9,17 @@ and open the template in the editor.
 */
 
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic);
 
 #logo {
     width: 150px;
     height: 150px;
     float: left;
+}
+
+#map {
+    width: 100%;
+    border: 1px solid #000;
 }
 
 
@@ -26,6 +32,7 @@ nav ul {
     text-align: center;
     background: rgba(255,255,255,.85);
     padding: 1em;
+    font-size: 125%;
 }
 
 h1{
@@ -36,13 +43,14 @@ h1{
 
 p{
     margin: 0 0 0 0;
-    font-size: 150%;
+    font-size: 125%;
     text-align: center;
 }
 
 #hours td{
-    font-size: 150%;
-    padding:  0 1em 0 0;
+    font-size: 100%;
+    padding:  0 .5em 0 .5em;
+    border-bottom: 1px solid #777;
 }
 
 #hours {
@@ -61,17 +69,24 @@ nav ul li a {
     text-decoration:none;
     font-size: 1.5em;
     color: black;
-    padding: 2em;
+    margin: 2em;
+}
+
+main a {
+    color:#a53c00;
+    text-decoration: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px
 }
 
 
-
 body {
-    background-image: url("background.jpg");
+    background-image: url("background2.jpg");
     background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    font-family: 'Cutive Mono', monospace;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-color: black;
+    font-family: 'Crimson Text', monospace;
 }
 
 @media (min-width:800px){
@@ -79,6 +94,7 @@ body {
         flex-direction: row;
         position:relative;
         top:2.5em;
+        font-size: 100%;
     }
 
     body {
