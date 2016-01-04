@@ -41,10 +41,20 @@ h1{
     margin:0 0 0 0;
 }
 
+h2 {
+    margin:.25em 0 -.5em 0;
+    font-size: 125%;
+}
+
 p{
     margin: 0 0 0 0;
     font-size: 125%;
     text-align: center;
+}
+
+#hours {
+    margin: 0 auto 0 auto;
+    border-collapse: collapse;
 }
 
 #hours td{
@@ -53,8 +63,31 @@ p{
     border-bottom: 1px solid #777;
 }
 
-#hours {
-    margin: 0 auto 0 auto;
+.menu {
+    width:100%;
+    border-collapse: collapse;
+    padding:0;
+    margin-top:0;
+
+}
+
+.menu td {
+    padding: 0 .5em 0 .5em;
+}
+
+.menu tr td:nth-child(2) {
+    width: 2em;
+}
+
+.menu tr:nth-child(odd) {
+    background: white;
+}
+
+.menu tr:nth-child(even) {
+    background: #eaeaea
+}
+.menu tr:hover {
+    background: yellow;
 }
 
 main {
@@ -62,7 +95,7 @@ main {
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
-
+    margin-bottom: 3em;
 }
 
 nav ul li a {
