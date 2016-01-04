@@ -37,8 +37,7 @@ nav ul {
 
 h1{
     text-align: center;
-    padding:.5em 0 0 0;
-    margin:0 0 0 0;
+    margin:.5em 0 -.5em 0;
 }
 
 h2 {
@@ -80,18 +79,19 @@ p{
 }
 
 .menu tr:nth-child(odd) {
-    background: white;
+    background: rgba(255,255,255,.60);
 }
 
 .menu tr:nth-child(even) {
-    background: #eaeaea
+    background: rgba(255,255,255,.25);
 }
 .menu tr:hover {
-    background: yellow;
+    background: khaki;
 }
 
 main {
     background: rgba(255,255,255,.85);
+    padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
@@ -126,7 +126,7 @@ body {
     nav ul{
         flex-direction: row;
         position:relative;
-        top:2.5em;
+        top:4.5em;
         font-size: 100%;
     }
 
@@ -136,7 +136,11 @@ body {
     }
     
     main {
-        margin-top:6em;
+        margin-top:9em;
     }
-    
+    #logo {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
 }
