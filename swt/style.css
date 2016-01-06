@@ -23,6 +23,7 @@ and open the template in the editor.
 }
 
 
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -70,6 +71,12 @@ p{
 
 }
 
+main aside{
+    
+    font-size:100%;
+    font-style: italic;
+}
+
 .menu td {
     padding: 0 .5em 0 .5em;
 }
@@ -88,6 +95,14 @@ p{
 .menu tr:hover {
     background: khaki;
 }
+
+.menu tr td aside {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 80%;
+    padding-left: 1em;
+}
+
 
 main {
     background: rgba(255,255,255,.85);
