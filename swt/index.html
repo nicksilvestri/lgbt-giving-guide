@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Saltwater Tavern</title>
+        <meta name="description" content="Salt Water Tavern Restaurant & Bar in Wakefield, RI">
+        <meta name="author" content="Nick Silvestri">
         <!-- Start Favicon-->
         <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -26,10 +28,20 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="sss/sss.min.js"></script>
+<link rel="stylesheet" href="sss/sss.css" type="text/css" media="all">
+
+<script>
+jQuery(function($) {
+$('.slider').sss();
+});
+</script>
+
     </head>
     <body>
         <nav>
-            <img id="logo" src="logo.png"/>
+            <img id="logo" alt="Saltwater Tavern" src="logo.png"/>
             <ul>
                 <li><a href="/swt"  id="onpage">home</a></li>
                 <li><a href="/swt/food.html">food</a></li>
@@ -37,22 +49,34 @@
             </ul>
         </nav>
         <main>
+
+
+<div class="slider">
+<img src="1.jpg" />
+<img src="2.jpg" />
+<img src="3.jpg" />
+</div>
+
+            
+            
+       
+
             <h1>Hours</h1>
 
             <table id="hours">
                 <tr> 
                     <td style="width:7.6em;">Monday-Thursday</td>
-                    <td style="width:5em;">3PM-10PM</td>
-                    <td><i>Menu Served</i></td>
+                    <td style="width:7em;">3PM-9:30PM</td>
+                    <td><i>Menu Served, half-priced appetizers 3-6</i></td>
                 </tr>
                 <tr>
                     <td>Friday</td>
-                    <td>Noon-11PM</td>
-                    <td><i>Menu Served</i></td>
+                    <td>Noon-10:30PM</td>
+                    <td><i>Menu Served, half-priced appetizers 3-5</i></td>
                 </tr>
                 <tr>
                     <td>Saturday</td>
-                    <td>9AM-11PM</td>
+                    <td>9AM-10:30PM</td>
                     <td><i>Brunch 9-3, Menu Served 3-11</i></td>
                 </tr>
                 <tr>
@@ -62,15 +86,24 @@
                 </tr>
             </table>
             <p style="font-weight: 600">The bar is always open until 1AM daily</p>
+            <p style="font-weight: 600">Upstairs open Thursday-Saturday</p>
 
             <h1>Contact Us</h1>
             <p><a href="tel:4017833777">401-783-3777</a><br><a href="mailto:hello@saltwatertavern.com">hello@saltwatertavern.com</a><br><a href="https://www.facebook.com/Saltwater-Tavern-480219785499643/">Like us on Facebook!</a></p>
 
             <h1>Location</h1>
-            <p><a href="https://www.google.com/maps/place/195+Main+St,+South+Kingstown,+RI+02879/@41.440938,-71.4978227,834m/data=!3m2!1e3!4b1!4m2!3m1!1s0x89e5b9468473fd21:0xdbc7e3b237723c15!6m1!1e1?hl=en">195 Main Street<br>Wakefield, RI</a></p>
+            <p><a href="https://www.google.com/maps/place/195+Main+St,+South+Kingstown,+RI+02879/@41.440938,-71.4978227,834m/data=!3m2!1e3!4b1!4m2!3m1!1s0x89e5b9468473fd21:0xdbc7e3b237723c15!6m1!1e1?hl=en">195 Main Street<br>Wakefield, RI</a><br>(Where the Old Italian Village used to be)</p>
             <br>
-            <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=195+Main+St,+South+Kingstown,+RI+02879&scale=2&zoom=18&size=400x200&maptype=roadmap&markers=41.4409500,-71.4956578&&key=AIzaSyDQdRsAtecZILGdNxRjawXfwH3m-m3ZYdw"/>
+            <a href="https://www.google.com/maps/place/195+Main+St,+South+Kingstown,+RI+02879/@41.440938,-71.4978227,834m/data=!3m2!1e3!4b1!4m2!3m1!1s0x89e5b9468473fd21:0xdbc7e3b237723c15!6m1!1e1?hl=en"><img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=195+Main+St,+South+Kingstown,+RI+02879&scale=2&zoom=18&size=400x200&maptype=roadmap&markers=41.4409500,-71.4956578&&key=AIzaSyDQdRsAtecZILGdNxRjawXfwH3m-m3ZYdw"/></a>
             <!--<iframe id="map" width="100%" max-width="600" height="450" frameborder="0" style="border:0; padding-top:1em;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIf1zhEa55YkRFTxyN7Ljx9s&key=AIzaSyBZPe3zSKwnbczsxZ0itqnaGnzBP766b70" allowfullscreen></iframe>-->
+
+            <p>Where to park:</p>
+            <img src="parking.jpg" style="width:100%;"/>
+
+
+
+
+
         </main>
     </body>
 </html>
