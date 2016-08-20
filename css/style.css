@@ -22,6 +22,7 @@ html {
 h1{
     text-align:center;
     font-family: 'Lato', sans-serif;
+    font-size:2.5em;
 }
 
 h2{
@@ -110,7 +111,7 @@ nav > ul > li > a {
     text-decoration: none;
     color:#211D0F;
     padding:.75em 2em;
-    transition:.25s;
+    transition:1s;
 }
 
 main {
