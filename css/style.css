@@ -15,7 +15,7 @@ and open the template in the editor.
 
 
 html {
-    background-color: #211D0F;
+    background-color: #7D1424;
     color:#211D0F;
 }
 
@@ -90,9 +90,15 @@ header{
 nav > ul >li >a:hover, /* mouse */
 nav > ul >li >a:focus, /* tab */
 nav > ul >li >a:active {
-    background-color: #FFDC74;
-    color:black;
-    padding:.75em;
+    background-color: #7D1424;
+    color:white;
+    padding:.75em 2em;
+    transition:.25s;
+}
+
+#onPage{
+	background-color: #7D1424;
+    color:white;
 }
 
 nav > ul {
@@ -103,7 +109,8 @@ nav > ul > li > a {
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     color:#211D0F;
-    padding:.75em;
+    padding:.75em 2em;
+    transition:.25s;
 }
 
 main {
