@@ -97,7 +97,7 @@ nav > ul >li >a:active {
 }
 
 #onPage{
-	background-color: #7D1424;
+	background-color: #2b1d1f;
     color:white;
 }
 
@@ -110,7 +110,7 @@ nav > ul > li > a {
     text-decoration: none;
     color:#211D0F;
     padding:.75em 2em;
-    transition:1s;
+    transition:.25s;
 }
 
 main {
