@@ -15,7 +15,7 @@ and open the template in the editor.
 
 
 html {
-    background-color: #7D1424;
+    background-color: #2b1d1f;
     color:#211D0F;
 }
 
@@ -90,7 +90,7 @@ header{
 nav > ul >li >a:hover, /* mouse */
 nav > ul >li >a:focus, /* tab */
 nav > ul >li >a:active {
-    background-color: #7D1424;
+    background-color: #2b1d1f;
     color:white;
     padding:.75em 2em;
     transition:.25s;
