@@ -1,0 +1,10 @@
+
+<label for="cars">Filter: </label>
+<select id="cars" name="cars">
+  <option value="volvo">XL</option>
+  <option value="saab">L</option>
+  <option value="fiat">M</option>
+  <option value="audi">S</option>
+</select>
+
+<app-org-card *ngFor="let org of orgs" [org]="org"></app-org-card>
