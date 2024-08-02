@@ -4,11 +4,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { OrgCard } from './org-card.model';
 import { CommonModule } from "@angular/common";
+import { UrlPipe } from '../pipes/url.pipe';
 
 @Component({
   selector: 'app-org-card',
   standalone: true,
-  imports: [HttpClientModule, CommonModule],
+  imports: [HttpClientModule, CommonModule, UrlPipe],
   templateUrl: './org-card.component.html',
   styleUrl: './org-card.component.scss'
 })

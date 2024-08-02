@@ -1,10 +1,12 @@
-
-<label for="cars">Filter: </label>
-<select id="cars" name="cars">
-  <option value="volvo">XL</option>
-  <option value="saab">L</option>
-  <option value="fiat">M</option>
-  <option value="audi">S</option>
+<label for="sort">Sort by: </label>
+<select #sort (change)="sortOrgs(sort.value)">
+  <option default value="large-to-small">Largest to Smallest (by revenue)</option>
+  <option default value="small-to-large">Smallest to Largest (by revenue)</option>
+  <option value="a-to-z">A to Z</option>
+  <option value="z-to-a">Z to A</option>
+  <!-- Add more sorting options as needed -->
 </select>
 
-<app-org-card *ngFor="let org of orgs" [org]="org"></app-org-card>
+<div class="org-container">
+  <app-org-card *ngFor="let org of orgs" [org]="org"></app-org-card>
+</div>

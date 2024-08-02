@@ -15,6 +15,7 @@ const googleSheetId = process.env.GOOGLE_SHEET_ID;
 const googleSheetPage = 'Sheet1';
 
 app.get("/getGays", async function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
     try {
 
         const sheetInstance = await google.sheets({ version: 'v4', auth: googleAuth});
@@ -27,7 +28,6 @@ app.get("/getGays", async function (req, res) {
         });
         
         const valuesFromSheet = infoObjectFromSheet.data.values;
-        console.log(valuesFromSheet);
         // return the values
         res.json({data: valuesFromSheet});
       }

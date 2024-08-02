@@ -28,6 +28,7 @@ export class OrgCardListComponent {
   }
 
   getGays() {
+    //this.http.get<any>('http://localhost:3000/getGays', {}).subscribe(
     this.http.get<any>('/getGays', {}).subscribe(
       (response) => {
         // Remove first row from response, and store it in headerRow
@@ -61,5 +62,34 @@ export class OrgCardListComponent {
         console.error(error);
       }
     );
+  }
+
+  sortOrgs(criteria: string) {
+    switch (criteria) {
+      case 'a-to-z':
+        this.orgs.sort((a, b) => {
+          if (a.name && b.name) {
+            return a.name.localeCompare(b.name);
+          }
+          return 0;
+        });
+        break;
+        case 'z-to-a':
+          this.orgs.sort((a, b) => {
+            if (a.name && b.name) {
+              return b.name.localeCompare(a.name);
+            }
+            return 0;
+          });
+          break;
+      case 'small-to-large':
+        this.orgs.sort((a, b) => a.revenue!! && b.revenue!! ? a.revenue - b.revenue : 0);
+        break;
+      case 'large-to-small':
+        this.orgs.sort((a, b) => a.revenue!! && b.revenue!! ? b.revenue - a.revenue : 0);
+        break;
+      default:
+        break;
+    }
   }
 }

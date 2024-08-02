@@ -1,11 +1,11 @@
 
 <div class="card">
     <h3>{{org.name | titlecase}}</h3>
-    <p><a href="{{org.url}}">{{org.url}}</a></p>
+    <p *ngIf="org.url"><a href="{{org.url}}">{{org.url | url}}</a></p>
 
     <h4 *ngIf="org.mission">Mission</h4>
     <p *ngIf="org.mission">{{org.mission}}</p>
 
     <h4>Revenue</h4>
-    <p>{{org.revenue}}</p>
+    <p>{{org.revenue | currency: 'USD' : 'symbol' : '1.0-0'}}</p>
 </div>
