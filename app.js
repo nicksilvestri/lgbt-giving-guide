@@ -16,6 +16,10 @@ const googleSheetPage = 'Sheet1';
 
 app.get("/getGays", async function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
+  // local only
+  //res.json(require('./sample-response.json'));
+  //return;
+  // end local only  
     try {
 
         const sheetInstance = await google.sheets({ version: 'v4', auth: googleAuth});
@@ -24,7 +28,7 @@ app.get("/getGays", async function (req, res) {
         const infoObjectFromSheet = await sheetInstance.spreadsheets.values.get({
             auth: googleAuth,
             spreadsheetId: googleSheetId,
-            range: `${googleSheetPage}!A2:AO100`
+            range: `${googleSheetPage}!A2:CD100`
         });
         
         const valuesFromSheet = infoObjectFromSheet.data.values;

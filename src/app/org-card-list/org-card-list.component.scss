@@ -9,4 +9,10 @@
        display: block;
       }
 }
-
+.sort-and-filter {
+    max-width: 600px;
+    margin: 0 auto;
+    ng-select {
+        margin: 10px;
+    }
+}

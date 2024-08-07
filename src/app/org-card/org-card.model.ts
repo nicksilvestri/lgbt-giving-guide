@@ -1,6 +1,7 @@
 export interface OrgCard {
-  name?: string;
+  name: string;
   url?: string;
   mission?: string;
   revenue?: number;
+  primaryFocus?: string;
 }

@@ -5,11 +5,12 @@ import { HttpHeaders } from '@angular/common/http';
 import { OrgCard } from './org-card.model';
 import { CommonModule } from "@angular/common";
 import { UrlPipe } from '../pipes/url.pipe';
+import { IdPipe } from '../pipes/id.pipe';  
 
 @Component({
   selector: 'app-org-card',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, UrlPipe],
+  imports: [HttpClientModule, CommonModule, UrlPipe, IdPipe],
   templateUrl: './org-card.component.html',
   styleUrl: './org-card.component.scss'
 })
@@ -17,10 +18,16 @@ import { UrlPipe } from '../pipes/url.pipe';
 
 export class OrgCardComponent {
 
+
   @Input({ required: true }) org!: OrgCard;
 
+  expanded = false;
 
     constructor() {
     }
+
+  toggleExpanded() {
+    this.expanded = !this.expanded;
+  }
   
 }

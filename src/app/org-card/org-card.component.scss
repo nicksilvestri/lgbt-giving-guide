@@ -1,4 +1,5 @@
 .card {
+    transition: all .5s linear;
     //border: 1px solid black;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -13,6 +14,41 @@
         max-width:600px;        
         margin: 40px auto;
     }
+}
+.collapsed  {
+    
+    .expand-icon {
+        transform: rotate(0deg);
+        transition: all 0.25s ease-out;
+    }
+    .showWhenExpanded {
+        font-size: 0;
+        //margin: 0;
+        opacity: 0;
+        //padding: 0;
+        /* fade out, then shrink */
+        transition: opacity .25s,
+                font-size .5s .25s,
+              ///  margin .5s .25s,
+                //padding .5s .25s;
+    }
+}
+.showWhenExpanded {
+    /* unshrink, then fade in */
+    transition: font-size .25s,
+               // margin .25s,
+                //padding .25s,
+                opacity .5s .25s;
+}
+.expand-icon {
+    margin-top:1em;
+    transition: all 0.25s ease-in;
+    //font-size: 1.5em;
+    transform: rotate(180deg);
+    color: #007bff;
+    cursor: pointer;
+    width:2em;
+    float:right;
 }
 
 a {

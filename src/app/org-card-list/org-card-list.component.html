@@ -1,12 +1,19 @@
-<label for="sort">Sort by: </label>
-<select #sort (change)="sortOrgs(sort.value)">
-  <option default value="large-to-small">Largest to Smallest (by revenue)</option>
-  <option default value="small-to-large">Smallest to Largest (by revenue)</option>
-  <option value="a-to-z">A to Z</option>
-  <option value="z-to-a">Z to A</option>
-  <!-- Add more sorting options as needed -->
-</select>
+<div class = "sort-and-filter">
+  <ng-select (change)="sortOrgs($event)" placeholder="Sort">
+    <ng-option default value="large-to-small">Largest to Smallest (by revenue)</ng-option>
+    <ng-option value="small-to-large">Smallest to Largest (by revenue)</ng-option>
+    <ng-option value="a-to-z">A to Z</ng-option>
+    <ng-option value="z-to-a">Z to A</ng-option>
+  </ng-select>
+  
+  <ng-select [(ngModel)]="selectedFocus" [multiple]="true" placeholder="Filter" (change)="filterOrgs($event)">
+    @for (car of primaryFocuses; track primaryFocuses) {
+        <ng-option [value]="car">{{car}}</ng-option>
+    }
+  </ng-select>
+</div>
+
 
 <div class="org-container">
-  <app-org-card *ngFor="let org of orgs" [org]="org"></app-org-card>
+  <app-org-card *ngFor="let org of displayedOrgs" [org]="org"></app-org-card>
 </div>
