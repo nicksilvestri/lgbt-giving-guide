@@ -4,7 +4,6 @@ import { OrgCard } from '../org-card/org-card.model';
 import { headersToMap } from './org-card-list.model';
 import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from "@angular/common";
-// import { Select2Module } from 'ng2-select2-component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 
@@ -31,7 +30,12 @@ export class OrgCardListComponent {
       { headerName: 'Website', keyInOrgCard: 'url' },
       { headerName: 'Mission', keyInOrgCard: 'mission' },
       { headerName: 'REVENUE_AMT', keyInOrgCard: 'revenue' },
-      { headerName: 'Primary Focus 1', keyInOrgCard: 'primaryFocus' }
+      { headerName: 'Primary Focus 1', keyInOrgCard: 'primaryFocus' },
+      { headerName: 'EIN', keyInOrgCard: 'ein' },
+      { headerName: 'CITY', keyInOrgCard: 'city' },
+      { headerName: 'STATE', keyInOrgCard: 'state' },
+      { headerName: 'RULING', keyInOrgCard: 'since' },
+      { headerName: 'DEDUCTIBILITY', keyInOrgCard: 'deductability' },
     ];
     this.getGays();
   }
@@ -60,7 +64,8 @@ export class OrgCardListComponent {
         // Then iterate over response to create orgs
         response.data.forEach((row: any[]) => {
           const org: OrgCard = {
-            name: ''
+            name: '',
+            ein: ''
           };
           this.headersToMap.forEach((header: headersToMap) => {
             const value = row[header.indexInSpreadsheet ? header.indexInSpreadsheet : 0];

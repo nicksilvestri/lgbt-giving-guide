@@ -3,7 +3,7 @@
     //border: 1px solid black;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 1px 1em; //1px to prevent margin collapse
+    padding: 1px 1em 1em; //1px to prevent margin collapse
     background-color:white;
     flex-shrink: 0;
     //margin: 30px;
@@ -54,4 +54,15 @@
 a {
     text-decoration: none !important;
     color: #007bff;
+}
+
+.focuses {
+    font-size:.8em;
+    span {
+        border-radius: 30px;
+        padding: .2em .6em;
+        font-weight: bold;
+        color: white;
+        background: #0088ff;
+    }
 }

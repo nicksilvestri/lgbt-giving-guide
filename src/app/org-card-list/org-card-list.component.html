@@ -1,5 +1,5 @@
 <div class = "sort-and-filter">
-  <ng-select (change)="sortOrgs($event)" placeholder="Sort">
+  <ng-select (change)="sortOrgs($event)" placeholder="Sort" [clearable]="false" [searchable]="false">
     <ng-option default value="large-to-small">Largest to Smallest (by revenue)</ng-option>
     <ng-option value="small-to-large">Smallest to Largest (by revenue)</ng-option>
     <ng-option value="a-to-z">A to Z</ng-option>

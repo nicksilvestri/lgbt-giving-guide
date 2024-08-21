@@ -1,0 +1,21 @@
+.detailed-table {
+    background: rgb(231 243 255);
+    border-radius: 10px;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+            &:not(:first-child) {
+                border-top: 1px solid rgb(197, 197, 197);
+            }
+
+            td{
+                font-family:'Courier New', Courier, monospace;
+
+                padding: 0.5em;
+            }
+
+        }
+    }
+}
