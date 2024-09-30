@@ -36,8 +36,8 @@ export class GetGaysService {
     const orgs: Array<OrgCard> = [];
 
     // FOR RUNNING LOCALLY POINT TO NODE SERVER SPECIFICALLY 
-    return this.http.get<any>('http://localhost:3000/getGays', {});
-    //return this.http.get<any>('/getGays', {})
+    //return this.http.get<any>('http://localhost:3000/getGays', {});
+    return this.http.get<any>('/getGays', {})
    }
 
 
