@@ -5,6 +5,7 @@
     
     <p>{{org.city | titlecase}}, {{org.state}}</p>
     <p *ngIf="org.url"><a href="{{org.url}}">{{org.url | url}}</a></p>
+    <p ><a href="/{{org.ein}}">Full Details</a></p>
     <p>Revenue: {{org.revenue | currency: 'USD' : 'symbol' : '1.0-0'}}</p>
 
     <div class="showWhenExpanded">
