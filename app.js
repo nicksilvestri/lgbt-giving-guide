@@ -10,7 +10,7 @@ const app = express()
 
 const googleAuth = google.auth.fromAPIKey(process.env.GOOGLE_API_KEY);
 const googleSheetId = process.env.GOOGLE_SHEET_ID;
-const googleSheetPage = 'Sheet1';
+const googleSheetPage = 'Sheet1'
 
 app.get("/getGays", async function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -41,7 +41,7 @@ app.get("/getGays", async function (req, res) {
 
 // use the express-static middleware
 app.use(express.static(__dirname + '/dist/lgbt-giving-guide/browser'));
-app.get( (req, res) => res.sendFile(path.join(__dirname)));
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname, 'dist/lgbt-giving-guide/browser', 'index.html')));
 
 // start the server listening for requests
 app.listen(process.env.PORT || 3000, 
