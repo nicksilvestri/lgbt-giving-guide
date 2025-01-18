@@ -10,6 +10,27 @@
 * {
     font-family:Helvetica, Arial, sans-serif
 }
+body{
+    margin:0;
+}
+main {
+    margin: 8px;
+}
 html{
-    background: linear-gradient(100deg, #FFADAD, #FFD6A5, #FDFFB6, #CAFFBF, #9BF6FF, #A0C4FF, #BDB2FF, #FFC6FF);
+    background: #F7941D;
+}
+nav {
+    background: white;
+    padding: 2vw 4vw;
+    img {
+        width: 174px;
+    }
+}
+h1,h2,h3,h4 {
+    font-family: "adelle-sans-condensed", sans-serif;
+font-weight: 900;
+font-style: normal;
+}
+h1{
+    font-size:4rem;
 }

@@ -15,8 +15,8 @@ const googleSheetPage = 'Sheet1'
 app.get("/getGays", async function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   // local only
-  //res.json(require('./sample-response.json'));
-  //return;
+  // res.json(require('./sample-response.json'));
+  // return;
   // end local only  
     try {
 
