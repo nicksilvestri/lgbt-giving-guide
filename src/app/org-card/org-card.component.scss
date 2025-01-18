@@ -58,11 +58,32 @@ a {
 
 .focuses {
     font-size:.8em;
+    display:flex;
+    flex-wrap:wrap;
     span {
         border-radius: 30px;
         padding: .2em .6em;
+        margin: .2em .2em;
         font-weight: bold;
         color: white;
+    }
+    .primary {
         background: #0088ff;
     }
+    .secondary {
+        background: #9dabba;
+    }
+}
+
+.flex {
+    display:flex;
+    justify-content: space-between;
+}
+
+button{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    
 }

@@ -4,6 +4,15 @@ export interface OrgCard {
   mission?: string;
   revenue?: number;
   primaryFocus?: string;
+  primaryFocus2?: string;
+  primaryFocus3?: string;
+  primaryFocus4?: string;
+  primaryFocus5?: string;
+  secondaryFocus?: string;
+  secondaryFocus2?: string;
+  secondaryFocus3?: string;
+  secondaryFocus4?: string;
+  secondaryFocus5?: string;
   ein?: string;
   city?: string;
   state?: string;
