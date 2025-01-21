@@ -22,18 +22,42 @@ html{
 nav {
     background: white;
     padding: 2vw 4vw;
+    display:flex;
     img {
         width: 174px;
     }
+    h1 {
+        margin:.2em auto 0;
+    }
+    a {
+        color:black;
+        font-family:inherit;
+        text-decoration: inherit;
+    }
 }
+
+@media only screen and (max-width: 600px) {
+    nav>h1 {
+      font-size: 2rem;
+      margin-top: .65em;
+    }
+    nav img {
+        width: 140px;
+    }
+  }
+
 h1,h2,h3,h4 {
-    font-family: "adelle-sans-condensed", sans-serif;
+    font-family: "adelle-sans-condensed", sans-serif!important;
 font-weight: 900;
 font-style: normal;
 text-transform: uppercase;
+margin-bottom:0;
 }
 h1{
     font-size:4rem;
+}
+p {
+    margin-top:0;
 }
 
 button {
@@ -42,4 +66,16 @@ button {
     border-radius: 100px;
     padding:1em;
     text-transform: uppercase;
+    cursor:pointer;
+    &:hover{
+        background:black;
+        color:white;
+    }
+}
+
+
+.loading{
+    width:50px;
+    margin:60px auto;
+    display:block;
 }

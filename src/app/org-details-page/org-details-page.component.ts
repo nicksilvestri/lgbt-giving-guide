@@ -16,11 +16,13 @@ export class OrgDetailsPageComponent {
   orgId: string;
   orgs: Array<OrgCard>;
   org: OrgCard;
+  loading:boolean;
 
   constructor(private route: ActivatedRoute, private getGaysService: GetGaysService) {
     this.orgId= '';
     this.orgs = [];
     this.org = { name: '', revenue: 0, primaryFocus: '' };
+    this.loading=true;
 
   }
 
@@ -32,6 +34,7 @@ export class OrgDetailsPageComponent {
       this.getGaysService.getGays().subscribe(response => {
         this.orgs = this.getGaysService.formatGays(response);
         this.org = this.orgs.find(org => org.ein === this.orgId)!;
+        this.loading=false;
         console.log(this.org);
       });
     }

@@ -1,38 +1,21 @@
 
 <div class="card" [ngClass]="expanded ? 'expanded' : 'collapsed'" id="{{org.name | id}}">
-    <img class="expand-icon" src="assets/images/caret.svg" (click)="toggleExpanded()"/>
     <h3>{{org.name | titlecase}}</h3>
-    <div class="flex">
         <p>{{org.city | titlecase}}, {{org.state}}</p>
-        <p *ngIf="org.url"><a href="{{org.url}}">{{org.url | url}}</a></p>
-        <p>Revenue: {{org.revenue | currency: 'USD' : 'symbol' : '1.0-0'}}</p>
-    </div>
-   
-
-    <div class="showWhenExpanded">
-        <h4 *ngIf="org.mission">Mission</h4>
-        <p *ngIf="org.mission">{{org.mission}}</p>
-
-        <app-detailed-table [tableData]="irsData">
-
-        </app-detailed-table>
-        
-
-        <br>
+        <p *ngIf="org.mission"><strong>Mission: </strong>{{org.mission}}</p>
+     <div class="focuses">
+        <span class="primary" *ngIf="org.primaryFocus"># {{org.primaryFocus}}</span>
+        <span class="primary" *ngIf="org.primaryFocus2"># {{org.primaryFocus2}}</span>
+        <span class="primary" *ngIf="org.primaryFocus3"># {{org.primaryFocus3}}</span>
+        <span class="primary" *ngIf="org.primaryFocus4"># {{org.primaryFocus4}}</span>
+        <span class="primary" *ngIf="org.primaryFocus5"># {{org.primaryFocus5}}</span>
+        <span class="secondary" *ngIf="org.secondaryFocus"># {{org.secondaryFocus}}</span>
+        <span class="secondary" *ngIf="org.secondaryFocus2"># {{org.secondaryFocus2}}</span>
+        <span class="secondary" *ngIf="org.secondaryFocus3"># {{org.secondaryFocus3}}</span>
+        <span class="secondary" *ngIf="org.secondaryFocus4"># {{org.secondaryFocus4}}</span>
+        <span class="secondary" *ngIf="org.secondaryFocus5"># {{org.secondaryFocus5}}</span>
     </div>
     <a href="/{{org.ein}}"><button>Full Details →</button></a>
-    <div class="focuses">
-        <span class="primary" *ngIf="org.primaryFocus">{{org.primaryFocus}}</span>
-        <span class="primary" *ngIf="org.primaryFocus2">{{org.primaryFocus2}}</span>
-        <span class="primary" *ngIf="org.primaryFocus3">{{org.primaryFocus3}}</span>
-        <span class="primary" *ngIf="org.primaryFocus4">{{org.primaryFocus4}}</span>
-        <span class="primary" *ngIf="org.primaryFocus5">{{org.primaryFocus5}}</span>
-        <span class="secondary" *ngIf="org.secondaryFocus">{{org.secondaryFocus}}</span>
-        <span class="secondary" *ngIf="org.secondaryFocus2">{{org.secondaryFocus2}}</span>
-        <span class="secondary" *ngIf="org.secondaryFocus3">{{org.secondaryFocus3}}</span>
-        <span class="secondary" *ngIf="org.secondaryFocus4">{{org.secondaryFocus4}}</span>
-        <span class="secondary" *ngIf="org.secondaryFocus5">{{org.secondaryFocus5}}</span>
-    </div>
     
 
 </div>

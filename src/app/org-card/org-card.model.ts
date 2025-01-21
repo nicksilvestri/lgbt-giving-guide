@@ -18,4 +18,9 @@ export interface OrgCard {
   state?: string;
   since?: string;
   deductability?: string;
+  vision?:string;
+  ed?: string;
+  stateOrNational?: string;
+  tresTake?: string;
+  propublicaLink?: string;
 }

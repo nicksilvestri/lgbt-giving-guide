@@ -7,13 +7,13 @@
   </ng-select>
   
   <ng-select [(ngModel)]="selectedFocus" [multiple]="true" placeholder="Filter" (change)="filterOrgs($event)">
-    @for (car of primaryFocuses; track primaryFocuses) {
+    @for (car of focuses; track focuses) {
         <ng-option [value]="car">{{car}}</ng-option>
     }
   </ng-select>
 </div>
 
-
+<img *ngIf="loading" class="loading" src="assets/images/loading.gif"/>
 <div class="org-container">
   <app-org-card *ngFor="let org of displayedOrgs" [org]="org"></app-org-card>
 </div>

@@ -1,12 +1,46 @@
 .card {
     transition: all .5s linear;
-    //border: 1px solid black;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 1px 1em 1em; //1px to prevent margin collapse
     background-color:white;
     flex-shrink: 0;
-    //margin: 30px;
+    margin-top: 40px;
     box-sizing: border-box;
     width:100%;   
+}
+
+button {
+    margin-right:10px;
+    img {
+        margin-left: 9px;
+        width: 11px;
+       
+    }
+    &:hover {
+        img {
+            filter: invert(100%);
+        }
+      }
+    
+}
+
+.focuses {
+    font-size:.9em;
+    display:flex;
+    flex-wrap:wrap;
+    span {
+        border-radius: 30px;
+        padding: .2em .6em;
+        margin: .2em .2em;
+        font-weight: bold;
+        color: white;
+    }
+    .primary {
+        // background: #0088ff;
+        background:black;
+    }
+    .secondary {
+        background: #9dabba;
+    }
 }

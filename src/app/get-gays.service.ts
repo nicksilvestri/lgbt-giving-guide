@@ -11,12 +11,12 @@ import { forEach } from 'lodash';
 export class GetGaysService {
 
   displayedOrgs: Array<OrgCard>;
-  primaryFocuses: Array<string>; 
+  focuses: Array<string>; 
   selectedFocus: string = "";
   headersToMap: Array<headersToMap>;
 
   constructor(private http: HttpClient) {
-    this.primaryFocuses = [];
+    this.focuses = [];
     this.displayedOrgs = [];
     this.headersToMap = [
       { headerName: 'NAME', keyInOrgCard: 'name' },
@@ -24,11 +24,25 @@ export class GetGaysService {
       { headerName: 'Mission', keyInOrgCard: 'mission' },
       { headerName: 'REVENUE_AMT', keyInOrgCard: 'revenue' },
       { headerName: 'Primary Focus 1', keyInOrgCard: 'primaryFocus' },
+      { headerName: 'Primary Focus 2', keyInOrgCard: 'primaryFocus2' },
+      { headerName: 'Primary Focus 3', keyInOrgCard: 'primaryFocus3' },
+      { headerName: 'Primary Focus 4', keyInOrgCard: 'primaryFocus4' },
+      { headerName: 'Primary Focus 5', keyInOrgCard: 'primaryFocus5' },
+      { headerName: 'Secondary Focus 1', keyInOrgCard: 'secondaryFocus' },
+      { headerName: 'Secondary Focus 2', keyInOrgCard: 'secondaryFocus2' },
+      { headerName: 'Secondary Focus 3', keyInOrgCard: 'secondaryFocus3' },
+      { headerName: 'Secondary Focus 4', keyInOrgCard: 'secondaryFocus4' },
+      { headerName: 'Secondary Focus 5', keyInOrgCard: 'secondaryFocus5' },
       { headerName: 'EIN', keyInOrgCard: 'ein' },
       { headerName: 'CITY', keyInOrgCard: 'city' },
       { headerName: 'STATE', keyInOrgCard: 'state' },
       { headerName: 'RULING', keyInOrgCard: 'since' },
       { headerName: 'DEDUCTIBILITY', keyInOrgCard: 'deductability' },
+      { headerName: 'Vision', keyInOrgCard: 'vision' },
+      { headerName: 'Executive Director', keyInOrgCard: 'ed' },
+      { headerName: 'State or National', keyInOrgCard: 'stateOrNational' },
+      { headerName: 'Tre\'s Take', keyInOrgCard: 'tresTake' },
+      { headerName: 'ProPublica Link', keyInOrgCard: 'propublicaLink' },
     ];
    }
 
@@ -72,11 +86,25 @@ export class GetGaysService {
             (org as any)[header.keyInOrgCard] = value;
           });
           orgs.push(org);
-          // after the org is added to orgs, let's check if there are any primary focuses
+          
+          // after the org is added to orgs, let's check if there are any focuses
           // that we haven't seen before
-          if (org.primaryFocus && !this.primaryFocuses.includes(org.primaryFocus)) {
-            this.primaryFocuses.push(org.primaryFocus);
-          }
+          [
+            org.primaryFocus,
+            org.primaryFocus2,
+            org.primaryFocus3,
+            org.primaryFocus4,
+            org.primaryFocus5,
+            org.secondaryFocus,
+            org.secondaryFocus2,
+            org.secondaryFocus3,
+            org.secondaryFocus4,
+            org.secondaryFocus5,
+          ].forEach((foc)=>{
+            if (foc && !this.focuses.includes(foc)) {
+              this.focuses.push(foc);
+            }
+          });
         });
         return orgs;
 

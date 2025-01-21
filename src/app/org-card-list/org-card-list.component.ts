@@ -17,18 +17,21 @@ import { GetGaysService } from "../get-gays.service";
 export class OrgCardListComponent {
   orgs: Array<OrgCard>;
   displayedOrgs: Array<OrgCard>;
-  primaryFocuses: Array<string>; 
+  focuses: Array<string>; 
   selectedFocus: string = "";
+  loading: boolean;
 
   constructor( private getGaysService: GetGaysService) {
     this.orgs = [];
     this.displayedOrgs = [];
-    this.primaryFocuses = [];
+    this.focuses = [];
+    this.loading = true;
 
     getGaysService.getGays().subscribe(response => {
       this.orgs = getGaysService.formatGays(response);
       this.displayedOrgs = JSON.parse(JSON.stringify(this.orgs));
-      this.primaryFocuses = getGaysService.primaryFocuses;
+      this.focuses = getGaysService.focuses;
+      this.loading=false;
     });
   }
 
@@ -64,7 +67,21 @@ export class OrgCardListComponent {
 
   filterOrgs (filters:string[]) {
     if (filters.length > 0){
-      this.displayedOrgs =  JSON.parse(JSON.stringify(this.orgs)).filter((org: OrgCard) => filters.includes(org.primaryFocus || ''));
+        this.displayedOrgs =  JSON.parse(JSON.stringify(this.orgs))
+        .filter(function(org: OrgCard){
+          return filters.filter((foc) => [
+            org.primaryFocus,
+            org.primaryFocus2,
+            org.primaryFocus3, 
+            org.primaryFocus4, 
+            org.primaryFocus5, 
+            org.secondaryFocus, 
+            org.secondaryFocus2, 
+            org.secondaryFocus3, 
+            org.secondaryFocus4, 
+            org.secondaryFocus5 
+          ].includes(foc)).length;
+        })
     } else {
       this.displayedOrgs =  JSON.parse(JSON.stringify(this.orgs));
     }
