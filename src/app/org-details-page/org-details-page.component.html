@@ -3,23 +3,26 @@
       <h2>{{org.name | titlecase}}</h2>
     
     <p>{{org.city | titlecase}}, {{org.state}}</p>
-    <a href="{{org.url}}" target="_blank"><button>Website<img src="assets/images/external-link.png"/></button></a>
-    <a href="{{org.propublicaLink}}" target="_blank"><button>ProPublica<img src="assets/images/external-link.png"/></button></a>
+    <a *ngIf="org.url" href="{{org.url}}" target="_blank"><button>Website<img src="assets/images/external-link.png"/></button></a>
+    <a *ngIf="org.propublicaLink" href="{{org.propublicaLink}}" target="_blank"><button>ProPublica<img src="assets/images/external-link.png"/></button></a>
 
     <h4 *ngIf="org.mission">Mission</h4>
     <p *ngIf="org.mission">{{org.mission}}</p>
 
-    <h4 *ngIf="org.mission">Vision</h4>
-    <p *ngIf="org.mission">{{org.vision}}</p>
+    <h4 *ngIf="org.vision">Vision</h4>
+    <p *ngIf="org.vision">{{org.vision}}</p>
 
-    <h4 *ngIf="org.mission">Tre's Take</h4>
-    <p *ngIf="org.mission">{{org.tresTake}}</p>
+    <h4 *ngIf="org.tresTake">Tre's Take</h4>
+    <p *ngIf="org.tresTake">{{org.tresTake}}</p>
 
-    <h4 *ngIf="org.mission">Revenue</h4>
-    <p *ngIf="org.mission">{{org.revenue | currency: 'USD' : 'symbol' : '1.0-0'}}</p>
+    <h4 *ngIf="org.revenue">Revenue</h4>
+    <p *ngIf="org.revenue">{{org.revenue | currency: 'USD' : 'symbol' : '1.0-0'}}</p>
 
-    <h4 *ngIf="org.mission">EIN</h4>
-    <p *ngIf="org.mission">{{org.ein}}</p>
+    <h4 *ngIf="org.ed">Executive Director</h4>
+    <p *ngIf="org.ed">{{org.ed}}</p>
+
+    <h4 *ngIf="org.ein">EIN</h4>
+    <p *ngIf="org.ein">{{org.ein}}</p>
 
     <div class="focuses">
         <span class="primary" *ngIf="org.primaryFocus"># {{org.primaryFocus}}</span>
